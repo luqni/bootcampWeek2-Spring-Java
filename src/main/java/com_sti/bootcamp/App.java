@@ -63,11 +63,18 @@ public class App
 		Customer cs = new Customer();
 		cs.setCustomerNumber(Integer.parseInt(customerNumber));
 		return customerNumber;
-		
-	}public List<Customer> getList(){
+	
+	}
+	@GetMapping("/customer")
+	public List<Customer> getList(){
+		Customer cs = new Customer();
+		cs.setCustomerNumber(1234);
+		cs.setFirstName("luqni");
 		ArrayList<Customer> list = new ArrayList<Customer>();
+		list.add(cs);
 		return list;
 	}
+	
 	
 	
 	
